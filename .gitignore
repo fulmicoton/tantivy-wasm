@@ -1,0 +1,14 @@
+**/*.bin
+.idea
+Cargo.lock
+tokyoindex
+target
+wikiindex
+manpages
+manpage-index
+dist
+tantivy
+italy-index
+italystatic
+node_modules
+**/*.wasm

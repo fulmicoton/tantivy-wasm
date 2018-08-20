@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> cargo wasm </title>
+    <script>
+    fetch('tantivy_wasm.wasm')
+    .then(response =>
+      response.arrayBuffer())
+    .then(bytes => {
+        var importObject= {env: {
+            "logf": function(args) {
+                console.log("logf", args);
+            },
+            "log2": function(args) {
+                console.log("log2", args)
+            }
+        }};
+      var instance = WebAssembly.instantiate(bytes, importObject);
+      console.log(instance);
+      return instance;
+    }).then(results => {
+        console.log("results");
+        console.log(results);
+        console.log(results.instance.exports.add_one());
+    });
+
+    </script>
+</head>
+</html>

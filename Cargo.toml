@@ -1,0 +1,12 @@
+[package]
+name = "tantivy-wasm"
+version = "0.1.0"
+authors = ["Paul Masurel <paul.masurel@gmail.com>"]
+
+[dependencies]
+tantivy = {path="../tantivy", default-features=false}
+wasm-bindgen = "0.2"
+
+[lib]
+crate-type = ["cdylib"]
+

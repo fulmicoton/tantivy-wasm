@@ -1,0 +1,13 @@
+body {
+    background-color: #eee;
+}
+
+
+li {
+    margin-height: 30px;
+}
+
+textarea {
+    width: 600px;
+    height: 200px;
+}
